@@ -8,11 +8,6 @@ public class SelectionSort implements Sort {
         selectionSort(array);
     }
 
-    @Override
-    public String getName() {
-        return "Selection Sort";
-    }
-
     private void selectionSort(SortArray array){
         int size = array.getArraySize();
         for(int i = 0; i < size; i++){

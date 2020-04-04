@@ -9,11 +9,6 @@ public class QuickSort implements Sort {
         quickSort(array, 0, size - 1);
     }
 
-    @Override
-    public String getName() {
-        return "Quick Sort";
-    }
-
     private void quickSort(SortArray array, int left, int right){
         if(left < right){
             int q = partition(array, left, right);

@@ -8,11 +8,6 @@ public class MergeSort implements Sort {
         mergeSort(array, 0, size - 1);
     }
 
-    @Override
-    public String getName() {
-        return "Merge Sort";
-    }
-
     public void mergeSort(SortArray array, int left, int right){
         if(left < right){
             int mid = (left + right) / 2;

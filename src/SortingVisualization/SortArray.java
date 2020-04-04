@@ -1,6 +1,5 @@
 package SortingVisualization;
 
-import SortingVisualization.Sleep;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,16 +13,10 @@ public class SortArray extends JPanel {
 
     private final int[] array;
     private final int[] barColors;
-    private JLabel label;
+
     public SortArray(){
         this.setBackground(Color.darkGray);
-        this.setLayout(null);
-        label = new JLabel("Sorting Visualization");
-        label.setForeground(Color.white);
-        label.setFont(label.getFont().deriveFont(36.0f));
-        label.setBounds(25,0, 250, 80);
-        label.setVisible(true);
-        this.add(label);
+        this.setBounds(0, 200, WIDTH, HEIGHT);
 
         array = new int[NUM_BARS];
         barColors = new int[NUM_BARS];
@@ -42,9 +35,6 @@ public class SortArray extends JPanel {
         return array[i];
     }
 
-    public void setLabelText(String str){
-        label.setText(str);
-    }
     public void swap(int first, int second, long msec){
         int temp = array[first];
         array[first] = array[second];

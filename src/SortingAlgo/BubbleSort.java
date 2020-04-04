@@ -8,11 +8,6 @@ public class BubbleSort implements Sort {
         bubbleSort(array);
     }
 
-    @Override
-    public String getName() {
-        return "Bubble Sort";
-    }
-
     private void bubbleSort(SortArray array){
         int size = array.getArraySize();
         for(int i = 0; i < size - 1; i++){

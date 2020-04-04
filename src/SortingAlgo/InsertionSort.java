@@ -8,11 +8,6 @@ public class InsertionSort implements Sort{
         insertionSort(array);
     }
 
-    @Override
-    public String getName() {
-        return "Insertion Sort";
-    }
-
     private void insertionSort(SortArray array){
         int size = array.getArraySize();
 
