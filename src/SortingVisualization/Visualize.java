@@ -3,6 +3,7 @@ package SortingVisualization;
 import SortingAlgo.*;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.concurrent.Semaphore;
@@ -20,17 +21,20 @@ public class Visualize {
     public Visualize(){
 
         window = new JFrame("Sorting Visualization");
-        window.setSize(1280, 800);
+       //window.setSize(1280, 800);
+        window.setPreferredSize(new Dimension(1280, 900));
+        window.setMaximumSize(new Dimension(1280, 900));
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setLayout(null);
         window.pack();
+        window.setLocationRelativeTo(null);
         window.setVisible(true);
 
         sortArray = new SortArray();
         window.add(sortArray);
 
         btn_SelectionSort = new JButton("Selection Sort");
-        btn_SelectionSort.setBounds(850, 200, 100, 50);
+        btn_SelectionSort.setBounds(850, 200, 150, 50);
         window.add(btn_SelectionSort);
         btn_SelectionSort.addActionListener(new ActionListener() {
             @Override
@@ -53,7 +57,7 @@ public class Visualize {
         });
 
         btn_BubbleSort = new JButton("Bubble Sort");
-        btn_BubbleSort.setBounds(850, 300, 100, 50);
+        btn_BubbleSort.setBounds(850, 300, 150, 50);
         window.add(btn_BubbleSort);
         btn_BubbleSort.addActionListener(new ActionListener() {
             @Override
@@ -75,7 +79,7 @@ public class Visualize {
         });
 
         btn_InsertionSort = new JButton("Insertion Sort");
-        btn_InsertionSort.setBounds(850, 400, 100, 50);
+        btn_InsertionSort.setBounds(850, 400, 150, 50);
         window.add(btn_InsertionSort);
         btn_InsertionSort.addActionListener(new ActionListener() {
             @Override
@@ -97,7 +101,7 @@ public class Visualize {
         });
 
         btn_MergeSort = new JButton("Merge Sort");
-        btn_MergeSort.setBounds(850, 500, 100, 50);
+        btn_MergeSort.setBounds(850, 500, 150, 50);
         window.add(btn_MergeSort);
         btn_MergeSort.addActionListener(new ActionListener() {
             @Override
@@ -119,7 +123,7 @@ public class Visualize {
         });
 
         btn_QuickSort = new JButton("Quick Sort");
-        btn_QuickSort.setBounds(850, 600, 100, 50);
+        btn_QuickSort.setBounds(850, 600, 150, 50);
         window.add(btn_QuickSort);
         btn_QuickSort.addActionListener(new ActionListener() {
             @Override
