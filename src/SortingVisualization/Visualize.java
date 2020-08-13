@@ -26,16 +26,14 @@ public class Visualize {
         window.setMaximumSize(new Dimension(1280, 900));
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setLayout(null);
-        window.pack();
         window.setLocationRelativeTo(null);
-        window.setVisible(true);
+
 
         sortArray = new SortArray();
         window.add(sortArray);
 
         btn_SelectionSort = new JButton("Selection Sort");
         btn_SelectionSort.setBounds(850, 200, 150, 50);
-        window.add(btn_SelectionSort);
         btn_SelectionSort.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -58,7 +56,6 @@ public class Visualize {
 
         btn_BubbleSort = new JButton("Bubble Sort");
         btn_BubbleSort.setBounds(850, 300, 150, 50);
-        window.add(btn_BubbleSort);
         btn_BubbleSort.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -80,7 +77,6 @@ public class Visualize {
 
         btn_InsertionSort = new JButton("Insertion Sort");
         btn_InsertionSort.setBounds(850, 400, 150, 50);
-        window.add(btn_InsertionSort);
         btn_InsertionSort.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -102,7 +98,6 @@ public class Visualize {
 
         btn_MergeSort = new JButton("Merge Sort");
         btn_MergeSort.setBounds(850, 500, 150, 50);
-        window.add(btn_MergeSort);
         btn_MergeSort.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -124,7 +119,6 @@ public class Visualize {
 
         btn_QuickSort = new JButton("Quick Sort");
         btn_QuickSort.setBounds(850, 600, 150, 50);
-        window.add(btn_QuickSort);
         btn_QuickSort.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -143,6 +137,14 @@ public class Visualize {
                 t.start();
             }
         });
+        window.add(btn_SelectionSort);
+        window.add(btn_BubbleSort);
+        window.add(btn_InsertionSort);
+        window.add(btn_MergeSort);
+        window.add(btn_QuickSort);
+
+        window.pack();
+        window.setVisible(true);
 
     }
 
